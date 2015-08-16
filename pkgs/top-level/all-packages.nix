@@ -17298,6 +17298,8 @@ in
 
   gradio = callPackage ../applications/audio/gradio { };
 
+  pianoteq = callPackage ../applications/audio/pianoteq { };
+
   puddletag = callPackage ../applications/audio/puddletag { };
 
   w_scan = callPackage ../applications/video/w_scan { };
