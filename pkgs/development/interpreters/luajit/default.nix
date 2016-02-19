@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   name    = "luajit-${version}";
-  version = "2.0.4";
+  version = "2.1.0-beta1";
 
   src = fetchurl {
     url    = "http://luajit.org/download/LuaJIT-${version}.tar.gz";
-    sha256 = "0zc0y7p6nx1c0pp4nhgbdgjljpfxsb5kgwp4ysz22l1p2bms83v2";
+    sha256 = "06170d38387c59d1292001a166e7f5524f5c5deafa8705a49a46fa42905668dd";
   };
 
   enableParallelBuilding = true;
