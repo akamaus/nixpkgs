@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
 
   configurePhase = false;
   buildFlags     = [ "amalg" ]; # Build highly optimized version
-  installPhase   = "make install PREFIX=$out";
+  installPhase   = "make install INSTALL_INC=$out/include PREFIX=$out";
 
   meta = with stdenv.lib; {
     description = "high-performance JIT compiler for Lua 5.1";
