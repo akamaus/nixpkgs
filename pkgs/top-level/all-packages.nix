@@ -5017,6 +5017,7 @@ let
     lua = lua5_1; # doesn't work with any other :(
   };
 
+  torch = callPackage ../development/lua-modules/torch {};
   ### END OF LUA
 
   lush2 = callPackage ../development/interpreters/lush {};
