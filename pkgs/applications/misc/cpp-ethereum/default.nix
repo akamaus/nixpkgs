@@ -1,5 +1,5 @@
 { stdenv
-, fetchFromGitHub
+, fetchgit
 , cmake
 , jsoncpp
 , libjson_rpc_cpp
@@ -8,25 +8,23 @@
 , leveldb
 , cryptopp
 , libcpuid
-, opencl-headers
 , ocl-icd
 , miniupnpc
 , libmicrohttpd
 , gmp
 , mesa
+, cudatoolkit
 , extraCmakeFlags ? []
 }:
 stdenv.mkDerivation rec {
   name = "cpp-ethereum-${version}";
-  version = "1.3.0";
+  version = "1.3.1-akamaus";
 
-  src = fetchFromGitHub {
-    owner = "ethereum";
-    repo = "cpp-ethereum";
-    rev = "62ab9522e58df9f28d2168ea27999a214b16ea96";
-    sha256 = "1fxgpqhmjhpv0zzs1m3yf9h8mh25dqpa7pmcfy7f9qiqpfdr4zq9";
+  src = fetchgit {
+    url = "https://github.com/akamaus/cpp-ethereum";
+    rev = "c3d8c78a97b6cc362ad993b714426170fa70de78";
   };
-
+  
   cmakeFlags = [ "-DCMAKE_BUILD_TYPE=Release" extraCmakeFlags ];
 
   configurePhase = ''
@@ -36,7 +34,7 @@ stdenv.mkDerivation rec {
     mkdir -p Build/Install
     pushd Build
 
-    cmake .. -DCMAKE_INSTALL_PREFIX=$(pwd)/Install $cmakeFlags
+    cmake .. -DETHASHCUDA=1 -DETHASHCL=0 -DETHSTRATUM=1 -DGUI=0 -DCMAKE_INSTALL_PREFIX=$(pwd)/Install $cmakeFlags
   '';
 
   enableParallelBuilding = true;
@@ -64,12 +62,12 @@ stdenv.mkDerivation rec {
     leveldb
     cryptopp
     libcpuid
-    opencl-headers
     ocl-icd
     miniupnpc
     libmicrohttpd
     gmp
     mesa
+    cudatoolkit
   ];
 
   dontStrip = true;
