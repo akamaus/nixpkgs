@@ -42,6 +42,8 @@ let
         cd pkg
       '';
 
+      patches = [ ./isnan.patch ];
+
       buildPhase = ''
         chmod -R u+w .
         while IFS= read -r -d ''$'\0' i; do
