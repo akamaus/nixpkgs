@@ -283,6 +283,11 @@
     githubId = 273837;
     name = "Mateusz Czapliński";
   };
+  akamaus = {
+    email = "dmitryvyal@gmail.com";
+    github = "akamaus";
+    name = "Dmitry Vyal";
+  };
   akaWolf = {
     email = "akawolf0@gmail.com";
     github = "akaWolf";
