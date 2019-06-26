@@ -193,6 +193,11 @@
     github = "alexanderkjeldaas";
     name = "Alexander Kjeldaas";
   };
+  akamaus = {
+    email = "dmitryvyal@gmail.com";
+    github = "akamaus";
+    name = "Dmitry Vyal";
+  };
   akavel = {
     email = "czapkofan@gmail.com";
     github = "akavel";
