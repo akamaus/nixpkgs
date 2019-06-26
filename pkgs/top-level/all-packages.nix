@@ -20751,6 +20751,8 @@ in
 
   enyo-doom = libsForQt5.callPackage ../games/enyo-doom { };
 
+  ergo = altcoins.ergo;
+
   eternity = callPackage ../games/eternity-engine { };
 
   eureka-editor = callPackage ../applications/misc/eureka-editor { };

@@ -50,6 +50,7 @@ rec {
   dogecoin  = callPackage ./dogecoin.nix { boost = boost165; withGui = true; };
   dogecoind = callPackage ./dogecoin.nix { boost = boost165; withGui = false; };
 
+  ergo = callPackage ./ergo.nix { };
 
   freicoin = callPackage ./freicoin.nix { boost = boost155; };
   go-ethereum = callPackage ./go-ethereum.nix {
