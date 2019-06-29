@@ -20753,6 +20753,8 @@ in
 
   ergo = altcoins.ergo;
 
+  ergo-autolykos-gpu-miner = callPackage ../applications/misc/ergo-autolykos-gpu-miner { };
+
   eternity = callPackage ../games/eternity-engine { };
 
   eureka-editor = callPackage ../applications/misc/eureka-editor { };
