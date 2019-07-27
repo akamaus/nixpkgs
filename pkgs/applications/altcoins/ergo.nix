@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "ergo";
-  version = "3.0.2";
+  version = "3.0.4";
 
   inherit jre;
 
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/ergoplatform/ergo/releases/download/v${version}/ergo-${version}.jar";
-    sha256 = "04c66bwksman6hwzzxrjamfn69h0vfp6zrgh3yq1dpwzhn37sw1s";
+    sha256 = "0sb8jlpq50qfdhyahans12ll9ikamvyigisvgdvr5b12fiqqmdlr";
   };
 
   meta = with stdenv.lib; {
