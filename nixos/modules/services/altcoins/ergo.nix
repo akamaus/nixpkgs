@@ -44,7 +44,7 @@ in {
       description = "Ergo full-node daemon";
       wantedBy = [ "multi-user.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.ergo}/bin/ergo ${lib.optionalString cfg.testnet "--testnet"}  -c ${cfg.configFile}";
+        ExecStart = "${pkgs.ergo}/bin/ergo --mainnet -c ${cfg.configFile}";
         WorkingDirectory = config.users.extraUsers.ergo.home;
         Environment="JAVA_OPTS='-Dlogback.stdout.level=${cfg.loglevel}'";
         Restart = "on-success";
