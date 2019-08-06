@@ -175,6 +175,7 @@
   ./services/admin/salt/master.nix
   ./services/admin/salt/minion.nix
   ./services/altcoins/ergo.nix
+  ./services/altcoins/ergo-gpu-miner.nix
   ./services/amqp/activemq/default.nix
   ./services/amqp/rabbitmq.nix
   ./services/audio/alsa.nix
