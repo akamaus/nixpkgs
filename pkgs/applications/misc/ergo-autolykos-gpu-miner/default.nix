@@ -5,13 +5,13 @@
 }:
 stdenv.mkDerivation rec {
   pname = "ergo-autolykos-gpu-miner-${version}";
-  version = "unstable-2019-06-28";
+  version = "fork-2019-08-10";
 
   src = fetchFromGitHub {
-    owner = "ergoplatform";
+    owner = "akamaus";
     repo = "Autolykos-GPU-miner";
-    rev = "0a2e289aa12ad5b55f90735759721d35ec1812fc";
-    sha256 = "1qm9phx97by1p83z8kd0paafpyb0gvsnbb0w3msm343p32f7mr7v";
+    rev = "6db37fc9300deea5b4bc9661fde4cd6f56eb772d";
+    sha256 = "143f8hj42gj1130f62flz6m7d8p6cxbdiw2d19g7r8449piajigj";
   };
 
   buildPhase = ''
