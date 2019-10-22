@@ -10,8 +10,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "akamaus";
     repo = "Autolykos-GPU-miner";
-    rev = "6db37fc9300deea5b4bc9661fde4cd6f56eb772d";
-    sha256 = "143f8hj42gj1130f62flz6m7d8p6cxbdiw2d19g7r8449piajigj";
+    rev = "e010eb047f1d0bbfd76975310df1fda3821a0596";
+    sha256 = "1x5mz0ncggp60276rwc6n6i3r57ydfsxaqw0m2bb9v9rn5wdbaic";
   };
 
   buildPhase = ''
