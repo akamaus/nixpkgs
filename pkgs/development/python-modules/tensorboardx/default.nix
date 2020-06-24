@@ -2,13 +2,13 @@
 
 buildPythonPackage rec {
   pname = "tensorboardx";
-  version = "1.8";
+  version = "2.0";
 
   src = fetchFromGitHub {
     owner = "lanpa";
     repo = "tensorboardX";
     rev = "v${version}";
-    sha256 = "1j5wwdc2xnlhl122693gjggixycnynkq1lw4cld06rqfimzqj9na";
+    sha256 = "0qqalq0fhbx0wnd8wdwhyhkkv2brvj9qbk3373vk3wjxbribf5c7";
   };
 
   checkInputs = [ boto3 crc32c matplotlib moto pillow pytorch pytest tensorflow-tensorboard torchvision ];
