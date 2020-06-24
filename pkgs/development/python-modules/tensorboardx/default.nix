@@ -16,12 +16,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ numpy protobuf six ];
 
   postPatch=''
-    substituteInPlace tests/test_summary.py --replace test_mesh _skip_test_mesh
-    substituteInPlace tests/test_summary.py --replace test_audio _skip_test_audio
-    substituteInPlace tests/test_summary.py --replace test_histogram_auto _skip_histogram_auto
-    substituteInPlace tests/test_summary.py --replace test_histogram_doane  _skip_test_histogram_doane
-    substituteInPlace tests/test_summary.py --replace test_histogram_fd _skip_test_histogram_fd
-
     substituteInPlace tests/test_visdom.py --replace test_TorchVis _skip_test_TorchVis
     substituteInPlace tests/test_onnx_graph.py --replace test_onnx_graph _skip_test_onnx_graph
     '';
